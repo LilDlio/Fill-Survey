@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Làm khảo sát",
+  "version": "2.0",
+  "description": "Đây là 1 extension hỗ trợ làm khảo sát môn học. Mình làm extension với mục đích là để tặng cho người yêu mình. Không có mục đích kinh doanh hay thu lợi nhuận tự project nhỏ này <3",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "assets/logo-16.png",
+      "48": "assets/logo-48.png",
+      "128": "assets/logo-128.png"
+    }
+  },
+  "icons": {
+    "16": "assets/logo-16.png",
+    "48": "assets/logo-48.png",
+    "128": "assets/logo-128.png"
+  }
+}

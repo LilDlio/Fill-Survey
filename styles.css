@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700&display=swap");
+
+body {
+  font-family: "Noto Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #6b21a8,
+    #a855f7,
+    #d8b4fe
+  ); /* Gradient tím đậm hơn */
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 340px;
+  min-height: 280px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(79, 70, 229, 0.2);
+  position: relative;
+  overflow: hidden;
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+h3 {
+  color: #ffffff;
+  font-size: 1.7em;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  text-align: center;
+  letter-spacing: -0.02em;
+  background: linear-gradient(45deg, #4c1d95, #7c3aed); /* Gradient tím đậm */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 5px rgba(79, 70, 229, 0.3);
+}
+
+h3:hover {
+  background: linear-gradient(45deg, #7c3aed, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Định dạng ô nhập liệu */
+#departmentInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 20px;
+  font-size: 1.1em;
+  font-weight: 500;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+}
+
+#departmentInput::placeholder {
+  color: #d1d5db;
+  opacity: 0.8;
+}
+
+#departmentInput:focus {
+  outline: none;
+  border-color: #7c3aed;
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 5px 20px rgba(79, 70, 229, 0.4);
+}
+
+#departmentInput:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Định dạng nút */
+#showSurvey,
+#selectRadio,
+#clearSurvey {
+  background: linear-gradient(
+    45deg,
+    #4c1d95,
+    #7c3aed,
+    #a855f7
+  ); /* Gradient tím đậm */
+  color: #ffffff;
+  border: none;
+  padding: 15px 35px;
+  font-size: 1.15em;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+#showSurvey:hover,
+#selectRadio:hover,
+#clearSurvey:hover {
+  background: linear-gradient(45deg, #7c3aed, #a855f7, #d8b4fe);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5);
+}
+
+#showSurvey:active::after,
+#selectRadio:active::after,
+#clearSurvey:active::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ripple 0.6s ease-out;
+}
+
+@keyframes ripple {
+  to {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
+}
+
+#showSurvey:active,
+#selectRadio:active,
+#clearSurvey:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.2);
+}
+
+#showSurvey:focus,
+#selectRadio:focus,
+#clearSurvey:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.3);
+}
+
+/* Nút "Xóa danh sách" */
+#clearSurvey {
+  background: linear-gradient(45deg, #ef4444, #f87171); /* Đỏ thuần */
+  box-shadow: 0 5px 15px rgba(239, 68, 68, 0.3);
+}
+
+#clearSurvey:hover {
+  background: linear-gradient(45deg, #f87171, #fca5a5);
+  box-shadow: 0 8px 25px rgba(239, 68, 68, 0.5);
+}
+
+#clearSurvey:focus {
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3);
+}
+
+.survey-list {
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+  margin: 20px 0;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+}
+
+.survey-item {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  padding: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(79, 70, 229, 0.1);
+}
+
+.survey-item:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+}
+
+.survey-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.survey-checkbox {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4c1d95; /* Tím đậm */
+}
+
+.survey-item h4 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #ffffff;
+  flex: 1;
+}
+
+.survey-item p {
+  margin: 3px 0;
+  font-size: 0.9em;
+  color: #ffffff;
+}
+
+.survey-item p strong {
+  color: #d8b4fe; /* Tím nhạt */
+}
+
+footer {
+  color: #ffffff;
+  font-size: 0.85em;
+  font-weight: 400;
+  text-align: center;
+  margin-top: auto;
+  padding: 12px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  border-radius: 0 0 20px 20px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+footer:hover {
+  color: #d8b4fe;
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-1px);
+}
