@@ -1,4 +1,4 @@
-# Fill-Survey - Chrome Extension
+# Fill Survey - Chrome Extension
 
 ## Introduction
 
