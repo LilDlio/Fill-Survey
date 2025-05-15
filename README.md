@@ -2,17 +2,17 @@
 
 ## Introduction
 
-This mini app was made as a gift for my girlfriend ❤️
+- This mini app was made as a gift for my girlfriend ❤️
 
-It is designed to support quick surveys at an anonymous N University 😂😂😂
+- It is designed to support quick surveys at an anonymous N University 😂😂😂
 
 ## Features
 
-A modern Chrome extension with a customizable survey popup interface.
+- A modern Chrome extension with a customizable survey popup interface.
 
 ## Requirements (required)
 
-Using Google Chrome
+- Using Google Chrome
 
 ## Installation Steps
 
