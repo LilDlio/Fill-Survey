@@ -68,7 +68,6 @@ git clone https://github.com/LilDlio/Fill-Survey.git
 │   └── logo-128.png
 │   └── logo-512.png
 ├── README.md
-├── styles simple version.css
 ```
 
 ---
