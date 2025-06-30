@@ -1,12 +1,27 @@
-// Tải dữ liệu khảo sát đã lưu khi popup mở
+// popup.js
+
+// Load saved survey and department input
 document.addEventListener("DOMContentLoaded", () => {
-  chrome.storage.local.get(["surveyData"], (result) => {
+  chrome.storage.local.get(["surveyData", "departmentName"], (result) => {
     const surveyList = result.surveyData || [];
     displaySurveyList(surveyList);
+
+    const departmentInput = document.getElementById("departmentInput");
+    if (departmentInput && result.departmentName) {
+      departmentInput.value = result.departmentName;
+    }
   });
 });
 
-// Sự kiện cho nút "Hiển thị khảo sát"
+// Store department input on change
+const departmentField = document.getElementById("departmentInput");
+if (departmentField) {
+  departmentField.addEventListener("input", (e) => {
+    chrome.storage.local.set({ departmentName: e.target.value });
+  });
+}
+
+// Event for "Show Surveys" button
 document.getElementById("showSurvey").addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -49,7 +64,7 @@ document.getElementById("showSurvey").addEventListener("click", async () => {
   });
 });
 
-// Sự kiện cho nút "Đánh giá nhanh"
+// Event for "Quick Evaluate" button
 document.getElementById("selectRadio").addEventListener("click", async () => {
   let [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
@@ -174,6 +189,7 @@ function displaySurveyList(surveyList) {
   });
 }
 
+// Receive survey data from content script
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "SURVEY_DATA") {
     const surveyList = message.data;
@@ -183,9 +199,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 });
 
+// Clear saved data and reset input
 document.getElementById("clearSurvey").addEventListener("click", () => {
-  chrome.storage.local.remove("surveyData", () => {
+  chrome.storage.local.remove(["surveyData", "departmentName"], () => {
     displaySurveyList([]);
+    if (departmentField) departmentField.value = "";
   });
 });
 
@@ -215,5 +233,5 @@ function fillSurveyForm(
 }
 
 function extractAndFillForm() {
-  // placeholder nếu bạn cần điền thêm từ surveyList
+  // Placeholder in case
 }
