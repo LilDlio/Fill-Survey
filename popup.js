@@ -1,5 +1,3 @@
-// popup.js
-
 // Tải dữ liệu khảo sát đã lưu khi popup mở
 document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.local.get(["surveyData"], (result) => {
