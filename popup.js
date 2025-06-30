@@ -1,5 +1,3 @@
-// popup.js
-
 // Load saved survey and department input
 document.addEventListener("DOMContentLoaded", () => {
   chrome.storage.local.get(["surveyData", "departmentName"], (result) => {
