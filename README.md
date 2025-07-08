@@ -79,11 +79,15 @@ git clone https://github.com/LilDlio/Fill-Survey.git
    https://phongdaotao.***.edu.vn/sinh-vien/phieu-khao-sat.html
    ```
    (Sorry I can't public name of University)
-2. Click Fill Survey Extension at top right corner
+2. Click **Fill Survey Extension** at top right corner
 
-![image](https://github.com/user-attachments/assets/5285d897-37f8-4c23-b421-9836599d2409) 
+![image](https://github.com/user-attachments/assets/425bc3f1-7260-4bf2-9184-62a91819fa0b)
 
-3. Enter your Department name (e.g., "Information Technology")
+*(Or you can click the **Extension button** at top right corner then you can see the **Fill Survey Extension**)*
+
+![image](https://github.com/user-attachments/assets/8a87e77b-c6df-44dc-a109-83659f954f6a)
+
+3. Enter your **Department name** (e.g., "Information Technology")
 
 ![image](https://github.com/user-attachments/assets/ec4221db-b0e1-45df-b559-d618605e4927)
 
@@ -95,7 +99,7 @@ git clone https://github.com/LilDlio/Fill-Survey.git
 
 ![image](https://github.com/user-attachments/assets/7c365fc3-ba4e-4a83-b59d-50c28b4f43a0)
 
-6. Then, select it using the checkbox ✅
+6. Then, select it using **the checkbox ✅**
 
 ![image](https://github.com/user-attachments/assets/7b1a1f2e-4734-4fe8-8d57-e6a781159b82)
  
@@ -105,7 +109,7 @@ git clone https://github.com/LilDlio/Fill-Survey.git
 
 ## 🛡 Privacy
 
-- This extension does NOT collect, store, or send any personal data
+- This extension does **NOT** collect, store, or send any personal data
 - Fully open-source — you can verify or customize the code as needed
 
 ---
