@@ -79,10 +79,17 @@ git clone https://github.com/LilDlio/Fill-Survey.git
    https://phongdaotao.***.edu.vn/sinh-vien/phieu-khao-sat.html
    ```
    (Sorry I can't public name of University)
-2. Enter your Department name (e.g., "Information Technology")
-3. Click **Show Survey List** to fetch data
-4. Select a survey using the checkbox ✅
-5. Click **Quick Evaluate** to autofill and submit the form
+2. Click Fill Survey Extension at upper right corner
+
+![image](https://github.com/user-attachments/assets/5285d897-37f8-4c23-b421-9836599d2409) 
+
+4. Enter your Department name (e.g., "Information Technology")
+
+![image](https://github.com/user-attachments/assets/dc5b6341-64d1-452b-a293-13c2da443955)
+
+5. Click **Hiển thị danh sách khảo sát** to fetch data
+6. Select a survey using the checkbox ✅
+7. Click **Đánh giá nhanh** to autofill and submit the form
 
 ---
 
