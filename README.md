@@ -103,6 +103,10 @@ My contact: ledungg.contact@gmail.com
 
 ---
 
-## 📃 License
+## 📜 License
 
-MIT — free to use and modify for personal or educational purposes.
+```yaml
+MIT License
+
+Copyright © 2025 Captain D
+```
